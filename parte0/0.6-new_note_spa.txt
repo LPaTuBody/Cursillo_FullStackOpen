@@ -1,0 +1,9 @@
+sequenceDiagram
+    participant navegador
+    participant servidor
+
+    Note left of navegador: El usuario crea una nueva nota en la versión spa de la app. El JS agrega la nota al DOM mediante un controlador de eventos y luego la envía al servidor
+    navegador->>servidor: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa - {content: "Blasphemy! Heresy!", date: "2025-05-07T14:43:48.309Z"}
+
+    Note right of servidor: El servidor recibe el objeto JSON de la app y crea un recurso con sus datos
+    servidor-->>navegador: HTTP 201 Created

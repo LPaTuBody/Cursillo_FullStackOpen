@@ -1,0 +1,26 @@
+sequenceDiagram
+    participant navegador
+    participant servidor
+
+    Note left of navegador: El usuario crea una nueva nota en la página y envía el formulario 
+    navegador->>servidor: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+    Note right of servidor: El servidor recibe los datos del formulario y solicita un redireccionamiento
+    servidor-->>navegador: HTTP 302 Found
+
+    Note left of navegador: El navegador vuelve a cargar la página de notas y todos sus recursos
+    navegador->>servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+    servidor-->>navegador: HTTP 200 OK - Código HTML
+
+    navegador->>servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    servidor-->>navegador: HTTP 200 OK - main.css
+
+    navegador->>servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    servidor-->>navegador: HTTP 200 OK - main.js
+
+    Note left of navegador: Se ejecuta el código JS y se solicitan los datos JSON requeridos por este
+    navegador->>servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    servidor-->>navegador: HTTP 200 OK - [{content: "Blasphemy! Heresy! ", date: "2025-05-07T14:43:48.309Z"}, ...]
+
+
+    Note left of navegador: El navegador ejecuta un controlador de eventos del JS para procesar los datos JSON y actualizar el DOM
