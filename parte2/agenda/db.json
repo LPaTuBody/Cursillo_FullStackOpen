@@ -1,0 +1,64 @@
+{
+  "persons": [
+    {
+      "id": "1",
+      "name": "Arto Hellas",
+      "number": "(809) 333-3333"
+    },
+    {
+      "id": "2",
+      "name": "María Carreño",
+      "number": "(809) 131-5672"
+    },
+    {
+      "id": "3",
+      "name": "Fernando García",
+      "number": "(809) 125-5256"
+    },
+    {
+      "id": "ec64",
+      "name": "Josefina Almonte",
+      "number": "(809) 401-6543"
+    },
+    {
+      "id": "20a1",
+      "name": "Génesis Núñez",
+      "number": "(809) 048-5651"
+    },
+    {
+      "id": "7f76",
+      "name": "Mercedes Collado",
+      "number": "(849) 657-0989"
+    },
+    {
+      "id": "2de4",
+      "name": "Marco Gutiérrez",
+      "number": "(809) 684-3546"
+    },
+    {
+      "id": "0822",
+      "name": "Manuel Quezada",
+      "number": "(829) 658-2917"
+    },
+    {
+      "id": "4f13",
+      "name": "Juliana Castillo",
+      "number": "(829) 408-5313"
+    },
+    {
+      "id": "39de",
+      "name": "Augusto Rodríguez",
+      "number": "(829) 380-6571"
+    },
+    {
+      "id": "3750",
+      "name": "Natalia Hernández",
+      "number": "(809) 657-4219"
+    },
+    {
+      "id": "45e0",
+      "name": "Héctor Ramírez",
+      "number": "(849) 677-7812"
+    }
+  ]
+}
